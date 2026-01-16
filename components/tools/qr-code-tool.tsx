@@ -289,39 +289,39 @@ END:VCARD`;
           {renderInputFields()}
 
           {/* Color Customization */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-gray-900 mb-3">Foreground</label>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <input
                   type="color"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
-                  className="w-14 h-14 rounded-2xl cursor-pointer border-2 border-white/20"
+                  className="w-14 h-14 rounded-2xl cursor-pointer border-2 border-white/20 flex-shrink-0"
                 />
                 <input
                   type="text"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
-                  className="glass-input flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
+                  className="glass-input min-w-0 flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
                   placeholder="#000000"
                 />
               </div>
             </div>
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-gray-900 mb-3">Background</label>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <input
                   type="color"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}
-                  className="w-14 h-14 rounded-2xl cursor-pointer border-2 border-white/20"
+                  className="w-14 h-14 rounded-2xl cursor-pointer border-2 border-white/20 flex-shrink-0"
                 />
                 <input
                   type="text"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}
-                  className="glass-input flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
+                  className="glass-input min-w-0 flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
                   placeholder="#FFFFFF"
                 />
               </div>
