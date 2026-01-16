@@ -18,11 +18,9 @@ const generateRandomColor = (): string => {
 };
 
 const generateHarmoniousPalette = (): Color[] => {
-  // Simple algorithm: generate base color, then create harmonious variations
   const baseHue = Math.random() * 360;
   const colors: Color[] = [];
 
-  // Complementary colors
   colors.push({ hex: hslToHex(baseHue, 70, 50), locked: false });
   colors.push({ hex: hslToHex((baseHue + 180) % 360, 70, 50), locked: false });
   colors.push({ hex: hslToHex((baseHue + 30) % 360, 60, 60), locked: false });
@@ -76,9 +74,9 @@ const getContrastRatio = (color1: string, color2: string): number => {
 };
 
 const getAccessibilityRating = (ratio: number): { text: string; color: string } => {
-  if (ratio >= 7) return { text: "AAA", color: "text-green-600" };
-  if (ratio >= 4.5) return { text: "AA", color: "text-yellow-600" };
-  return { text: "Fail", color: "text-red-600" };
+  if (ratio >= 7) return { text: "AAA", color: "text-green-400" };
+  if (ratio >= 4.5) return { text: "AA", color: "text-yellow-400" };
+  return { text: "Fail", color: "text-red-400" };
 };
 
 const hexToTailwind = (hex: string): string => {
@@ -136,30 +134,34 @@ ${config}
   }, [colors]);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="glass-card p-8">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold">Your Color Palette</h3>
-        <div className="flex gap-2">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+        <div>
+          <h3 className="text-3xl font-bold text-white mb-2">Your Color Palette</h3>
+          <p className="text-white/60">AI-generated harmonious colors</p>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
           <button
             onClick={generatePalette}
-            className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition"
+            className="button-primary px-6 py-3 rounded-2xl font-semibold flex items-center gap-2"
           >
-            <RefreshCw className="w-4 h-4" />
-            Generate Palette
+            <RefreshCw className="w-5 h-5" />
+            Generate
           </button>
           <button
             onClick={exportTailwind}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition"
+            className="glass-button px-6 py-3 rounded-2xl font-semibold flex items-center gap-2"
           >
-            <Download className="w-4 h-4" />
-            Export Tailwind
+            <Download className="w-5 h-5" />
+            Export
           </button>
         </div>
       </div>
 
       {/* Color Cards */}
-      <div className="grid grid-cols-5 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         {colors.map((color, index) => {
           const bgColor = { backgroundColor: color.hex };
           const textColor = parseInt(color.hex.slice(1), 16) > 0xffffff / 2 ? "text-gray-900" : "text-white";
@@ -171,82 +173,107 @@ ${config}
           return (
             <div
               key={index}
-              className="relative group rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl"
-              style={bgColor}
+              className="relative group rounded-3xl overflow-hidden glass-card animate-fadeInScale"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Lock Button */}
-              <button
-                onClick={() => toggleLock(index)}
-                className={`absolute top-2 right-2 p-2 rounded-full ${
-                  color.locked
-                    ? "bg-white text-gray-900"
-                    : "bg-black/20 text-white hover:bg-black/40"
-                } transition`}
-              >
-                {color.locked ? (
-                  <Lock className="w-4 h-4" />
-                ) : (
-                  <Unlock className="w-4 h-4" />
-                )}
-              </button>
+              {/* Color Background */}
+              <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" style={bgColor}></div>
 
-              {/* Color Info */}
-              <div className={`p-6 ${textColor}`}>
-                <p className="text-2xl font-bold mb-2">{color.hex}</p>
-                <p className="text-sm opacity-80 mb-4">
-                  rgb({Object.values(hexToRgb(color.hex)).join(", ")})
-                </p>
+              {/* Glass Overlay */}
+              <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
 
-                {/* Accessibility Info */}
-                <div className="text-xs space-y-1 opacity-90">
-                  <p>vs White: {ratingWhite.text} ({contrastWithWhite.toFixed(2)})</p>
-                  <p>vs Black: {ratingBlack.text} ({contrastWithBlack.toFixed(2)})</p>
+              {/* Content */}
+              <div className="relative p-6 min-h-[280px] flex flex-col">
+                {/* Lock Button */}
+                <button
+                  onClick={() => toggleLock(index)}
+                  className={`absolute top-4 right-4 p-3 rounded-2xl ${
+                    color.locked
+                      ? "bg-white/90 text-gray-900"
+                      : "bg-black/20 text-white hover:bg-black/40"
+                  } transition-all duration-300`}
+                >
+                  {color.locked ? (
+                    <Lock className="w-5 h-5" />
+                  ) : (
+                    <Unlock className="w-5 h-5" />
+                  )}
+                </button>
+
+                {/* Color Info */}
+                <div className={`flex-1 ${textColor}`}>
+                  <p className="text-3xl font-bold mb-2">{color.hex}</p>
+                  <p className="text-sm opacity-80 mb-6 font-mono">
+                    rgb({Object.values(hexToRgb(color.hex)).join(", ")})
+                  </p>
+
+                  {/* Accessibility Info */}
+                  <div className="space-y-2 text-xs opacity-90 mb-6">
+                    <div className="glass px-3 py-2 rounded-xl">
+                      <span className="font-semibold">vs White:</span>{" "}
+                      <span className={ratingWhite.color}>{ratingWhite.text}</span>
+                      <span className="opacity-60 ml-1">({contrastWithWhite.toFixed(2)})</span>
+                    </div>
+                    <div className="glass px-3 py-2 rounded-xl">
+                      <span className="font-semibold">vs Black:</span>{" "}
+                      <span className={ratingBlack.color}>{ratingBlack.text}</span>
+                      <span className="opacity-60 ml-1">({contrastWithBlack.toFixed(2)})</span>
+                    </div>
+                  </div>
+
+                  {/* Tailwind Code */}
+                  <div className="glass px-3 py-3 rounded-xl font-mono text-xs">
+                    {color.hex.toLowerCase()}
+                  </div>
                 </div>
 
-                {/* Tailwind Code */}
-                <div className="mt-4 p-2 bg-black/20 rounded text-xs font-mono">
-                  {color.hex.toLowerCase()}
-                </div>
+                {/* Copy Button */}
+                <button
+                  onClick={() => copyToClipboard(color.hex, index)}
+                  className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 ${
+                    textColor
+                  } px-6 py-3 rounded-2xl glass font-semibold transition-all duration-300 hover:scale-105`}
+                >
+                  {copiedIndex === index ? (
+                    <>
+                      <Check className="w-4 h-4 inline mr-2" />
+                      Copied!
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4 inline mr-2" />
+                      Copy HEX
+                    </>
+                  )}
+                </button>
               </div>
-
-              {/* Copy Button */}
-              <button
-                onClick={() => copyToClipboard(color.hex, index)}
-                className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 ${
-                  textColor
-                } opacity-0 group-hover:opacity-100 transition px-4 py-2 rounded-lg bg-black/40 hover:bg-black/60`}
-              >
-                {copiedIndex === index ? (
-                  <>
-                    <Check className="w-4 h-4 inline mr-1" />
-                    Copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4 inline mr-1" />
-                    Copy
-                  </>
-                )}
-              </button>
             </div>
           );
         })}
       </div>
 
       {/* Instructions */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <p className="text-sm text-blue-900">
-          <strong>Tip:</strong> Click the lock icon to keep a color while regenerating others.
-          All palettes are checked for WCAG accessibility compliance.
-        </p>
+      <div className="glass p-6 rounded-2xl flex items-start gap-4">
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+          <span className="text-xl">💡</span>
+        </div>
+        <div>
+          <h4 className="font-bold text-white mb-1">Pro Tip</h4>
+          <p className="text-white/70 text-sm leading-relaxed">
+            Click the lock icon to keep a color while regenerating others. All palettes are checked for WCAG accessibility compliance.
+          </p>
+        </div>
       </div>
 
       {/* Color Export Options */}
-      <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-4">
         {colors.map((color, index) => (
-          <div key={index} className="bg-gray-50 rounded-lg p-3">
-            <p className="text-xs font-semibold text-gray-600 mb-1">Tailwind:</p>
-            <code className="text-xs bg-white px-2 py-1 rounded block">
+          <div key={index} className="glass p-4 rounded-2xl animate-fadeInScale" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-6 h-6 rounded-lg shadow-lg" style={{ backgroundColor: color.hex }}></div>
+              <p className="text-xs font-semibold text-white">Tailwind</p>
+            </div>
+            <code className="text-xs text-white/80 bg-black/20 px-3 py-2 rounded-xl block font-mono">
               {hexToTailwind(color.hex)}
             </code>
           </div>

@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Color & QR Code Tools - Free Online Design Tools",
@@ -32,7 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        {/* Animated Gradient Background */}
+        <div className="gradient-background"></div>
+        {/* Noise Texture Overlay */}
+        <div className="noise-overlay"></div>
+        {children}
+      </body>
     </html>
   );
 }
