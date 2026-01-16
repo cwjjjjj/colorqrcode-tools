@@ -44,58 +44,58 @@ export default function TermsPage() {
           {/* Hero */}
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="w-20 h-20 rounded-3xl icon-gradient-pink flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <FileText className="w-10 h-10 text-white" />
+              <FileText className="w-10 h-10 text-gray-800" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white" style={{ letterSpacing: "-0.02em" }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800" style={{ letterSpacing: "-0.02em" }}>
               Terms of Service
             </h1>
-            <p className="text-white/60">Last updated: January 16, 2025</p>
+            <p className="text-gray-800/60">Last updated: January 16, 2025</p>
           </div>
 
           {/* Content */}
           <div className="glass-card p-8 md:p-12 prose prose-invert max-w-none animate-fadeInScale">
-            <h2 className="text-2xl font-bold text-white mb-4">Agreement to Terms</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Agreement to Terms</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               By accessing and using ColorQRCode Tools, you accept and agree to be bound by the terms and provisions of this agreement.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Use License</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Use License</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               Permission is granted to use this website for personal or commercial use. This includes the use of our color palette generator and QR code generator tools.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Disclaimer</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Disclaimer</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               The materials on ColorQRCode Tools are provided "as is". We make no warranties, expressed or implied, and hereby disclaim all warranties regarding these tools.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Limitations</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Limitations</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               In no event shall ColorQRCode Tools be liable for any damages arising out of the use or inability to use our tools.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Accuracy of Materials</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Accuracy of Materials</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               While we strive to keep our tools accurate and up-to-date, we make no representations about the completeness or accuracy of the information provided.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Links</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Links</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               ColorQRCode Tools has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Modifications</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Modifications</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               ColorQRCode Tools may revise these terms of service at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms.
             </p>
 
-            <h2 className="text-2xl font-bold text-white mt-8 mb-4">Governing Law</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Governing Law</h2>
+            <p className="text-gray-800/80 leading-relaxed">
               These terms and conditions are governed by and construed in accordance with the laws and you irrevocably submit to the exclusive jurisdiction of the courts.
             </p>
 
             <div className="mt-8 glass p-6 rounded-2xl">
-              <p className="text-sm text-white/80">
+              <p className="text-sm text-gray-800/80">
                 <strong>Contact Us:</strong> If you have questions about these Terms of Service, please contact us at{' '}
                 <Link href="/contact" className="text-[var(--ios-blue)] hover:underline">Contact Page</Link>
               </p>
@@ -108,11 +108,11 @@ export default function TermsPage() {
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
-            <p className="text-white/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
+            <p className="text-gray-800/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
             <div className="flex justify-center gap-4">
-              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Privacy</Link>
-              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Terms</Link>
-              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Contact</Link>
+              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Privacy</Link>
+              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Terms</Link>
+              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Contact</Link>
             </div>
           </div>
         </div>

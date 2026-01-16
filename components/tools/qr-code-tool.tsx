@@ -141,13 +141,13 @@ END:VCARD`;
       case "url":
         return (
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-white mb-3">Website URL</label>
+            <label className="block text-sm font-semibold text-gray-900 mb-3">Website URL</label>
             <input
               type="url"
               value={qrData}
               onChange={(e) => setQrData(e.target.value)}
               placeholder="https://example.com"
-              className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+              className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
             />
           </div>
         );
@@ -156,31 +156,31 @@ END:VCARD`;
         return (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Network Name (SSID)</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Network Name (SSID)</label>
               <input
                 type="text"
                 value={wifiData.ssid}
                 onChange={(e) => setWifiData({ ...wifiData, ssid: e.target.value })}
                 placeholder="MyWiFiNetwork"
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Password</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Password</label>
               <input
                 type="text"
                 value={wifiData.password}
                 onChange={(e) => setWifiData({ ...wifiData, password: e.target.value })}
                 placeholder="WiFiPassword"
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Security Type</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Security Type</label>
               <select
                 value={wifiData.security}
                 onChange={(e) => setWifiData({ ...wifiData, security: e.target.value as any })}
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900"
               >
                 <option value="WPA" className="bg-gray-900">WPA/WPA2</option>
                 <option value="WEP" className="bg-gray-900">WEP</option>
@@ -195,54 +195,54 @@ END:VCARD`;
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-white mb-3">First Name</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">First Name</label>
                 <input
                   type="text"
                   value={vCardData.firstName}
                   onChange={(e) => setVCardData({ ...vCardData, firstName: e.target.value })}
                   placeholder="John"
-                  className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                  className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-white mb-3">Last Name</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-3">Last Name</label>
                 <input
                   type="text"
                   value={vCardData.lastName}
                   onChange={(e) => setVCardData({ ...vCardData, lastName: e.target.value })}
                   placeholder="Doe"
-                  className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                  className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Phone</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Phone</label>
               <input
                 type="tel"
                 value={vCardData.phone}
                 onChange={(e) => setVCardData({ ...vCardData, phone: e.target.value })}
                 placeholder="+1234567890"
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Email</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Email</label>
               <input
                 type="email"
                 value={vCardData.email}
                 onChange={(e) => setVCardData({ ...vCardData, email: e.target.value })}
                 placeholder="john@example.com"
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-white mb-3">Organization</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Organization</label>
               <input
                 type="text"
                 value={vCardData.organization}
                 onChange={(e) => setVCardData({ ...vCardData, organization: e.target.value })}
                 placeholder="Company Name"
-                className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60"
               />
             </div>
           </div>
@@ -251,13 +251,13 @@ END:VCARD`;
       case "text":
         return (
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-white mb-3">Text Message</label>
+            <label className="block text-sm font-semibold text-gray-900 mb-3">Text Message</label>
             <textarea
               value={qrData}
               onChange={(e) => setQrData(e.target.value)}
               placeholder="Enter your text here..."
               rows={5}
-              className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40 resize-none"
+              className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900 placeholder-gray-500/60 resize-none"
             />
           </div>
         );
@@ -273,11 +273,11 @@ END:VCARD`;
         {/* Left Column - Input */}
         <div className="space-y-6">
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-white mb-3">QR Code Type</label>
+            <label className="block text-sm font-semibold text-gray-900 mb-3">QR Code Type</label>
             <select
               value={qrType}
               onChange={(e) => setQrType(e.target.value as QRCodeType)}
-              className="glass-input w-full px-5 py-4 rounded-2xl text-white"
+              className="glass-input w-full px-5 py-4 rounded-2xl text-gray-900"
             >
               <option value="url" className="bg-gray-900">🔗 Website URL</option>
               <option value="wifi" className="bg-gray-900">📶 WiFi Network</option>
@@ -291,7 +291,7 @@ END:VCARD`;
           {/* Color Customization */}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="block text-sm font-semibold text-white mb-3">Foreground</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Foreground</label>
               <div className="flex items-center gap-3">
                 <input
                   type="color"
@@ -303,13 +303,13 @@ END:VCARD`;
                   type="text"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
-                  className="glass-input flex-1 px-4 py-3 rounded-xl text-white text-sm font-mono"
+                  className="glass-input flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
                   placeholder="#000000"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label className="block text-sm font-semibold text-white mb-3">Background</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-3">Background</label>
               <div className="flex items-center gap-3">
                 <input
                   type="color"
@@ -321,7 +321,7 @@ END:VCARD`;
                   type="text"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}
-                  className="glass-input flex-1 px-4 py-3 rounded-xl text-white text-sm font-mono"
+                  className="glass-input flex-1 px-4 py-3 rounded-xl text-gray-900 text-sm font-mono"
                   placeholder="#FFFFFF"
                 />
               </div>
@@ -367,7 +367,7 @@ END:VCARD`;
                 </button>
                 <button
                   onClick={() => downloadQRCode("svg")}
-                  className="glass-button px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 text-white"
+                  className="glass-button px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 text-gray-900"
                 >
                   <Download className="w-5 h-5" />
                   SVG
@@ -376,11 +376,11 @@ END:VCARD`;
 
               <div className="mt-6 glass px-4 py-3 rounded-2xl flex items-center gap-3">
                 <span className="text-green-400 text-lg">✓</span>
-                <p className="text-white/80 text-sm">High resolution • Print ready</p>
+                <p className="text-gray-700 text-sm">High resolution • Print ready</p>
               </div>
             </div>
           ) : (
-            <div className="text-center text-white/40">
+            <div className="text-center text-gray-500/60">
               <div className="w-32 h-32 mx-auto mb-6 rounded-3xl glass flex items-center justify-center">
                 <QrCode className="w-16 h-16 opacity-50" />
               </div>
@@ -396,8 +396,8 @@ END:VCARD`;
           <span className="text-xl">💡</span>
         </div>
         <div>
-          <h4 className="font-bold text-white mb-2">Pro Tips</h4>
-          <ul className="text-white/70 text-sm space-y-2">
+          <h4 className="font-bold text-gray-900 mb-2">Pro Tips</h4>
+          <ul className="text-gray-700 text-sm space-y-2">
             <li>• Use high contrast colors for best scanning results</li>
             <li>• Test QR codes before printing or publishing</li>
             <li>• WiFi QR codes work best with WPA2 security</li>

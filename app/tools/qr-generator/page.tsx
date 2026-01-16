@@ -64,14 +64,14 @@ export default function QRCodePage() {
             <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
                 <QrCode className="w-4 h-4 text-[var(--ios-blue)]" />
-                <span className="text-sm font-medium text-white">Free Generator</span>
+                <span className="text-sm font-medium text-gray-800">Free Generator</span>
               </div>
 
-              <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white" style={{ letterSpacing: "-0.02em" }}>
+              <h2 className="text-gray-900 text-5xl md:text-6xl font-bold mb-4 text-gray-800" style={{ letterSpacing: "-0.02em" }}>
                 QR Code Generator
               </h2>
 
-              <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-800/70 max-w-2xl mx-auto leading-relaxed">
                 Create custom QR codes with logos, colors, and different formats. 100% free with unlimited downloads.
               </p>
             </div>
@@ -89,22 +89,22 @@ export default function QRCodePage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="glass-card p-6 text-center animate-fadeInScale stagger-1">
                 <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-lg font-bold mb-2 text-white">Custom Colors</h3>
-                <p className="text-white/70 text-sm">
+                <h3 className="text-gray-900 text-lg font-bold mb-2 text-gray-800">Custom Colors</h3>
+                <p className="text-gray-800/70 text-sm">
                   Personalize your QR codes with custom foreground and background colors
                 </p>
               </div>
               <div className="glass-card p-6 text-center animate-fadeInScale stagger-2">
                 <div className="text-4xl mb-4">📱</div>
-                <h3 className="text-lg font-bold mb-2 text-white">Multiple Formats</h3>
-                <p className="text-white/70 text-sm">
+                <h3 className="text-gray-900 text-lg font-bold mb-2 text-gray-800">Multiple Formats</h3>
+                <p className="text-gray-800/70 text-sm">
                   Download as PNG or SVG. Perfect for print and digital use
                 </p>
               </div>
               <div className="glass-card p-6 text-center animate-fadeInScale stagger-3">
                 <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-lg font-bold mb-2 text-white">Instant Download</h3>
-                <p className="text-white/70 text-sm">
+                <h3 className="text-gray-900 text-lg font-bold mb-2 text-gray-800">Instant Download</h3>
+                <p className="text-gray-800/70 text-sm">
                   Generate and download high-resolution QR codes in seconds
                 </p>
               </div>
@@ -116,15 +116,15 @@ export default function QRCodePage() {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="glass-card p-8 md:p-12 prose prose-invert max-w-none">
-              <h2 className="text-3xl font-bold text-white mb-6">About QR Code Generator</h2>
-              <p className="text-white/80 leading-relaxed">
+              <h2 className="text-gray-900 text-3xl font-bold text-gray-800 mb-6">About QR Code Generator</h2>
+              <p className="text-gray-800/80 leading-relaxed">
                 Our free QR code generator helps you create custom QR codes for any purpose. Whether you need
                 a QR code for your website, WiFi network, business card, or marketing campaign, our tool makes
                 it easy to generate professional QR codes in seconds.
               </p>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">Features</h3>
-              <ul className="space-y-3 text-white/80">
+              <h3 className="text-gray-900 text-2xl font-bold text-gray-800 mt-8 mb-4">Features</h3>
+              <ul className="space-y-3 text-gray-800/80">
                 <li className="flex items-start gap-3">
                   <span className="text-[var(--ios-blue)] font-bold">•</span>
                   <span><strong>Custom Colors:</strong> Match your brand colors with foreground and background customization</span>
@@ -147,43 +147,43 @@ export default function QRCodePage() {
                 </li>
               </ul>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">QR Code Types</h3>
+              <h3 className="text-gray-900 text-2xl font-bold text-gray-800 mt-8 mb-4">QR Code Types</h3>
 
               <div className="space-y-4">
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="font-bold text-white mb-2">1. Website URL QR Code</h4>
-                  <p className="text-white/70 text-sm">
+                  <h4 className="font-bold text-gray-800 mb-2">1. Website URL QR Code</h4>
+                  <p className="text-gray-800/70 text-sm">
                     Perfect for directing people to your website, landing page, or any online content. Just enter
                     your URL and generate the QR code.
                   </p>
                 </div>
 
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="font-bold text-white mb-2">2. WiFi QR Code</h4>
-                  <p className="text-white/70 text-sm">
+                  <h4 className="font-bold text-gray-800 mb-2">2. WiFi QR Code</h4>
+                  <p className="text-gray-800/70 text-sm">
                     Let guests connect to your WiFi without sharing the password. Include network name (SSID),
                     password, and security type.
                   </p>
                 </div>
 
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="font-bold text-white mb-2">3. vCard QR Code</h4>
-                  <p className="text-white/70 text-sm">
+                  <h4 className="font-bold text-gray-800 mb-2">3. vCard QR Code</h4>
+                  <p className="text-gray-800/70 text-sm">
                     Share contact information instantly. Perfect for business cards, networking events, and
                     professional profiles.
                   </p>
                 </div>
 
                 <div className="glass p-4 rounded-xl">
-                  <h4 className="font-bold text-white mb-2">4. Plain Text QR Code</h4>
-                  <p className="text-white/70 text-sm">
+                  <h4 className="font-bold text-gray-800 mb-2">4. Plain Text QR Code</h4>
+                  <p className="text-gray-800/70 text-sm">
                     Encode any text message, phone number, or email address. Great for simple information sharing.
                   </p>
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">How to Use</h3>
-              <ol className="space-y-3 text-white/80">
+              <h3 className="text-gray-900 text-2xl font-bold text-gray-800 mt-8 mb-4">How to Use</h3>
+              <ol className="space-y-3 text-gray-800/80">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 text-white text-sm flex items-center justify-center font-bold">1</span>
                   <span>Select your QR code type (URL, WiFi, vCard, or Text)</span>
@@ -206,8 +206,8 @@ export default function QRCodePage() {
                 </li>
               </ol>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">Best Practices</h3>
-              <ul className="space-y-3 text-white/80">
+              <h3 className="text-gray-900 text-2xl font-bold text-gray-800 mt-8 mb-4">Best Practices</h3>
+              <ul className="space-y-3 text-gray-800/80">
                 <li className="flex items-start gap-3">
                   <span className="text-[var(--ios-green)]">✓</span>
                   <span><strong>Size:</strong> Use at least 2x2cm for print materials</span>
@@ -236,14 +236,14 @@ export default function QRCodePage() {
         {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+            <h2 className="text-gray-900 text-4xl font-bold text-center mb-12 text-gray-800">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   What is a QR code generator?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   A QR code generator creates 2D barcodes that can be scanned with smartphones to access
                   information instantly. Our generator creates custom QR codes for various purposes including
                   websites, WiFi networks, contact information, and more.
@@ -251,77 +251,77 @@ export default function QRCodePage() {
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   Are these QR codes free to use?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   Yes! Our QR code generator is completely free with no limits. Generate unlimited QR codes
                   with no watermarks or registration required.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   Can I customize QR code colors?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   Absolutely! You can customize both foreground and background colors to match your brand.
                   However, ensure good contrast for reliable scanning.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   What file formats are available?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   We offer PNG (raster) and SVG (vector) formats. PNG is great for digital use, while SVG is
                   perfect for print as it can be scaled infinitely without quality loss.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   How do I create a WiFi QR code?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   Select "WiFi" from the type dropdown, enter your network name (SSID), password, and select
                   the security type (WPA/WEP). Generate the QR code and guests can scan it to connect automatically.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   Do these QR codes expire?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   No, the QR codes generated here are static and don't expire. They will work as long as the
                   linked content (website, WiFi network, etc.) remains active.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   Can I use QR codes commercially?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   Yes! All QR codes generated by our tool are free for both personal and commercial use.
                   No attribution required.
                 </p>
               </details>
 
               <details className="glass-card p-6 group">
-                <summary className="font-semibold cursor-pointer text-white flex items-center justify-between">
+                <summary className="font-semibold cursor-pointer text-gray-800 flex items-center justify-between">
                   What size should QR codes be for printing?
                   <span className="transition-transform duration-300 group-open:rotate-180">▼</span>
                 </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
+                <p className="mt-4 text-gray-800/70 leading-relaxed">
                   For reliable scanning, print QR codes at least 2x2cm (0.8x0.8 inches). For materials viewed from
                   farther away, use larger sizes (4x4cm or more).
                 </p>
@@ -334,8 +334,8 @@ export default function QRCodePage() {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="glass-card p-12 text-center">
-              <h2 className="text-4xl font-bold mb-4 text-white">Need Color Palettes Too?</h2>
-              <p className="text-white/70 mb-8 text-lg">
+              <h2 className="text-gray-900 text-4xl font-bold mb-4 text-gray-800">Need Color Palettes Too?</h2>
+              <p className="text-gray-800/70 mb-8 text-lg">
                 Try our AI-powered color palette generator for creating beautiful, accessible color schemes.
               </p>
               <Link
@@ -352,11 +352,11 @@ export default function QRCodePage() {
         <footer className="py-12 px-4 border-t border-white/10">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center">
-              <p className="text-white/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
+              <p className="text-gray-800/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
               <div className="flex justify-center gap-4">
-                <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Privacy</Link>
-                <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Terms</Link>
-                <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Contact</Link>
+                <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Privacy</Link>
+                <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Terms</Link>
+                <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Contact</Link>
               </div>
             </div>
           </div>

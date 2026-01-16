@@ -51,10 +51,10 @@ export default function Home() {
             <h2 className="text-6xl md:text-7xl font-bold mb-6 text-balance" style={{ letterSpacing: "-0.02em" }}>
               <span className="text-gradient">Beautiful Design</span>
               <br />
-              <span className="text-white">Made Simple</span>
+              <span className="text-gray-900">Made Simple</span>
             </h2>
 
-            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto text-balance leading-relaxed">
+            <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto text-balance leading-relaxed">
               Generate stunning color palettes and custom QR codes with our free online tools.
               Perfect for designers, developers, and creators.
             </p>
@@ -93,21 +93,21 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-bold mb-3 text-white">AI Color Palette</h3>
+              <h3 className="text-3xl font-bold mb-3 text-gray-900">AI Color Palette</h3>
 
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Generate beautiful, harmonious color schemes with AI. WCAG compliant,
                 fully accessible, and export to Tailwind CSS instantly.
               </p>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   AI Powered
                 </span>
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   Accessible
                 </span>
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   Tailwind
                 </span>
               </div>
@@ -136,21 +136,21 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-bold mb-3 text-white">QR Code Generator</h3>
+              <h3 className="text-3xl font-bold mb-3 text-gray-900">QR Code Generator</h3>
 
-              <p className="text-white/70 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Create custom QR codes with logos, colors, and multiple formats.
                 WiFi, vCard, URLs, and more - all in one place.
               </p>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   Custom Logo
                 </span>
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   WiFi
                 </span>
-                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-white">
+                <span className="px-4 py-2 rounded-full glass text-sm font-medium text-gray-800">
                   vCard
                 </span>
               </div>
@@ -174,8 +174,8 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-5xl font-bold mb-4 text-white">Why Choose Our Tools?</h2>
-            <p className="text-xl text-white/60">Powerful features for modern creators</p>
+            <h2 className="text-5xl font-bold mb-4 text-gray-900">Why Choose Our Tools?</h2>
+            <p className="text-xl text-gray-700">Powerful features for modern creators</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -183,8 +183,8 @@ export default function Home() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Lightning Fast</h3>
-              <p className="text-white/70 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">Lightning Fast</h3>
+              <p className="text-gray-700 leading-relaxed">
                 Generate results in seconds with our optimized algorithms and instant previews
               </p>
             </div>
@@ -193,8 +193,8 @@ export default function Home() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">AI Powered</h3>
-              <p className="text-white/70 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">AI Powered</h3>
+              <p className="text-gray-700 leading-relaxed">
                 Smart algorithms create harmonious color combinations that work perfectly together
               </p>
             </div>
@@ -203,8 +203,8 @@ export default function Home() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Accessible</h3>
-              <p className="text-white/70 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">Accessible</h3>
+              <p className="text-gray-700 leading-relaxed">
                 WCAG compliant color contrast checking built-in for inclusive design
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <p className="text-white/60 text-sm">
+            <p className="text-gray-700 text-sm">
               © 2025 ColorQRCode Tools. Beautiful design tools for everyone.
             </p>
           </div>

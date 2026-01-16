@@ -45,12 +45,12 @@ export default function ContactPage() {
           {/* Hero */}
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="w-20 h-20 rounded-3xl icon-gradient-blue flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Mail className="w-10 h-10 text-white" />
+              <Mail className="w-10 h-10 text-gray-800" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white" style={{ letterSpacing: "-0.02em" }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800" style={{ letterSpacing: "-0.02em" }}>
               Contact Us
             </h1>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-800/70 max-w-2xl mx-auto">
               We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </div>
@@ -58,49 +58,49 @@ export default function ContactPage() {
           {submitted ? (
             <div className="glass-card p-12 text-center animate-fadeInScale">
               <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <CheckCircle className="w-10 h-10 text-white" />
+                <CheckCircle className="w-10 h-10 text-gray-800" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-3">Message Sent!</h2>
-              <p className="text-white/80">Thank you for contacting us. We'll get back to you soon.</p>
+              <h2 className="text-3xl font-bold text-gray-800 mb-3">Message Sent!</h2>
+              <p className="text-gray-800/80">Thank you for contacting us. We'll get back to you soon.</p>
             </div>
           ) : (
             <div className="glass-card p-8 md:p-12 animate-fadeInScale">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-white mb-3">
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-3">
                       Name
                     </label>
                     <input
                       type="text"
                       id="name"
                       required
-                      className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                      className="glass-input w-full px-5 py-4 rounded-2xl text-gray-800 placeholder-white/40"
                       placeholder="Your name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-white mb-3">
+                    <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-3">
                       Email
                     </label>
                     <input
                       type="email"
                       id="email"
                       required
-                      className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40"
+                      className="glass-input w-full px-5 py-4 rounded-2xl text-gray-800 placeholder-white/40"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-white mb-3">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-800 mb-3">
                     Subject
                   </label>
                   <select
                     id="subject"
-                    className="glass-input w-full px-5 py-4 rounded-2xl text-white"
+                    className="glass-input w-full px-5 py-4 rounded-2xl text-gray-800"
                   >
                     <option value="general" className="bg-gray-900">General Inquiry</option>
                     <option value="feedback" className="bg-gray-900">Feedback</option>
@@ -111,14 +111,14 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-white mb-3">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-3">
                     Message
                   </label>
                   <textarea
                     id="message"
                     required
                     rows={6}
-                    className="glass-input w-full px-5 py-4 rounded-2xl text-white placeholder-white/40 resize-none"
+                    className="glass-input w-full px-5 py-4 rounded-2xl text-gray-800 placeholder-white/40 resize-none"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -135,8 +135,8 @@ export default function ContactPage() {
 
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             <div className="glass-card p-6 animate-fadeInScale stagger-1">
-              <h3 className="font-bold text-lg mb-3 text-white">Other Ways to Reach Us</h3>
-              <ul className="space-y-2 text-white/70">
+              <h3 className="font-bold text-lg mb-3 text-gray-800">Other Ways to Reach Us</h3>
+              <ul className="space-y-2 text-gray-800/70">
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[var(--ios-blue)]" />
                   <a href="mailto:contact@colorqrcode.com" className="text-[var(--ios-blue)] hover:underline">
@@ -147,8 +147,8 @@ export default function ContactPage() {
             </div>
 
             <div className="glass-card p-6 animate-fadeInScale stagger-2">
-              <h3 className="font-bold text-lg mb-3 text-white">Response Time</h3>
-              <p className="text-white/70">
+              <h3 className="font-bold text-lg mb-3 text-gray-800">Response Time</h3>
+              <p className="text-gray-800/70">
                 We typically respond to all inquiries within 24-48 hours during business days.
               </p>
             </div>
@@ -160,11 +160,11 @@ export default function ContactPage() {
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
-            <p className="text-white/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
+            <p className="text-gray-800/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
             <div className="flex justify-center gap-4">
-              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Privacy</Link>
-              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Terms</Link>
-              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Contact</Link>
+              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Privacy</Link>
+              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Terms</Link>
+              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Contact</Link>
             </div>
           </div>
         </div>

@@ -303,7 +303,7 @@ export default function HowToCreateQRCodes() {
                 </p>
                 <a
                   href="/tools/qr-generator"
-                  className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition"
+                  className="inline-block bg-primary-600 text-gray-800 px-6 py-3 rounded-lg hover:bg-primary-700 transition"
                 >
                   Create QR Code Now →
                 </a>

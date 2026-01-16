@@ -225,7 +225,7 @@ export default function HowToUseAIColorPalette() {
                 </p>
                 <a
                   href="/tools/color-palette"
-                  className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition"
+                  className="inline-block bg-primary-600 text-gray-800 px-6 py-3 rounded-lg hover:bg-primary-700 transition"
                 >
                   Try Color Palette Generator →
                 </a>

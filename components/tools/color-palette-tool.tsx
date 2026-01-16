@@ -138,8 +138,8 @@ ${config}
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>
-          <h3 className="text-3xl font-bold text-white mb-2">Your Color Palette</h3>
-          <p className="text-white/60">AI-generated harmonious colors</p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-2">Your Color Palette</h3>
+          <p className="text-gray-700">AI-generated harmonious colors</p>
         </div>
 
         <div className="flex flex-wrap gap-3">
@@ -187,10 +187,10 @@ ${config}
                 {/* Lock Button */}
                 <button
                   onClick={() => toggleLock(index)}
-                  className={`absolute top-4 right-4 p-3 rounded-2xl ${
+                  className={`absolute top-4 right-4 p-3 rounded-2xl shadow-lg ${
                     color.locked
                       ? "bg-white/90 text-gray-900"
-                      : "bg-black/20 text-white hover:bg-black/40"
+                      : "bg-gray-900/80 text-white hover:bg-gray-900"
                   } transition-all duration-300`}
                 >
                   {color.locked ? (
@@ -258,8 +258,8 @@ ${config}
           <span className="text-xl">💡</span>
         </div>
         <div>
-          <h4 className="font-bold text-white mb-1">Pro Tip</h4>
-          <p className="text-white/70 text-sm leading-relaxed">
+          <h4 className="font-bold text-gray-900 mb-1">Pro Tip</h4>
+          <p className="text-gray-700 text-sm leading-relaxed">
             Click the lock icon to keep a color while regenerating others. All palettes are checked for WCAG accessibility compliance.
           </p>
         </div>
@@ -271,9 +271,9 @@ ${config}
           <div key={index} className="glass p-4 rounded-2xl animate-fadeInScale" style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-6 h-6 rounded-lg shadow-lg" style={{ backgroundColor: color.hex }}></div>
-              <p className="text-xs font-semibold text-white">Tailwind</p>
+              <p className="text-xs font-semibold text-gray-900">Tailwind</p>
             </div>
-            <code className="text-xs text-white/80 bg-black/20 px-3 py-2 rounded-xl block font-mono">
+            <code className="text-xs text-gray-800 bg-white/40 px-3 py-2 rounded-xl block font-mono">
               {hexToTailwind(color.hex)}
             </code>
           </div>

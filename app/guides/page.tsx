@@ -68,10 +68,10 @@ export default function GuidesPage() {
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white" style={{ letterSpacing: "-0.02em" }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800" style={{ letterSpacing: "-0.02em" }}>
               Guides & Tutorials
             </h1>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-800/70 max-w-2xl mx-auto">
               Learn how to make the most of our free design tools with our comprehensive guides
             </p>
           </div>
@@ -86,20 +86,20 @@ export default function GuidesPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 rounded-xl icon-gradient-blue text-white">
+                  <div className="p-3 rounded-xl icon-gradient-blue text-gray-800">
                     {guide.icon}
                   </div>
                   <div className="flex-1">
-                    <span className="inline-block text-xs font-semibold text-white bg-white/20 px-3 py-1 rounded-full mb-3">
+                    <span className="inline-block text-xs font-semibold text-gray-800 bg-white/20 px-3 py-1 rounded-full mb-3">
                       {guide.category}
                     </span>
-                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-[var(--ios-blue)] transition-colors">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-[var(--ios-blue)] transition-colors">
                       {guide.title}
                     </h3>
-                    <p className="text-white/70 text-sm">{guide.description}</p>
+                    <p className="text-gray-800/70 text-sm">{guide.description}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
+                <div className="flex items-center gap-2 text-gray-800/60 text-sm">
                   <span>📖 {guide.readTime}</span>
                 </div>
               </Link>
@@ -108,8 +108,8 @@ export default function GuidesPage() {
 
           {/* CTA Section */}
           <div className="mt-16 glass-card p-12 text-center animate-fadeInScale">
-            <h2 className="text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
-            <p className="text-white/70 mb-8 text-lg">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">Ready to Get Started?</h2>
+            <p className="text-gray-800/70 mb-8 text-lg">
               Try our free tools and start creating beautiful designs today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -122,7 +122,7 @@ export default function GuidesPage() {
               </Link>
               <Link
                 href="/tools/qr-generator"
-                className="glass-button px-8 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 text-white"
+                className="glass-button px-8 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 text-gray-800"
               >
                 <QrCode className="w-5 h-5" />
                 QR Code Generator
@@ -136,11 +136,11 @@ export default function GuidesPage() {
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
-            <p className="text-white/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
+            <p className="text-gray-800/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
             <div className="flex justify-center gap-4">
-              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Privacy</Link>
-              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Terms</Link>
-              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Contact</Link>
+              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Privacy</Link>
+              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Terms</Link>
+              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-gray-800">Contact</Link>
             </div>
           </div>
         </div>
