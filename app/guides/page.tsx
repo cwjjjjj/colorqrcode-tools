@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { BookOpen, Palette, QrCode } from "lucide-react";
+import { BookOpen, Palette, QrCode, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Guides & Tutorials - ColorQRCode Tools",
@@ -22,80 +22,56 @@ export default function GuidesPage() {
       readTime: "5 min read",
     },
     {
-      title: "AI Color Palette for Branding",
-      description: "Discover how to create cohesive brand colors with our AI-powered tool.",
-      slug: "/guides/ai-color-palette-for-branding",
-      icon: <Palette className="w-6 h-6" />,
-      category: "Color Tools",
-      readTime: "7 min read",
-    },
-    {
-      title: "Accessible Color Design Guide",
-      description: "Learn about WCAG compliance and creating accessible color palettes.",
-      slug: "/guides/accessible-color-design-guide",
-      icon: <Palette className="w-6 h-6" />,
-      category: "Accessibility",
-      readTime: "10 min read",
-    },
-    {
-      title: "How to Create QR Codes with Logos",
+      title: "How to Create QR Codes",
       description: "Step-by-step guide to creating custom QR codes for your business.",
       slug: "/guides/how-to-create-qr-codes",
       icon: <QrCode className="w-6 h-6" />,
       category: "QR Tools",
       readTime: "6 min read",
     },
-    {
-      title: "WiFi QR Code Generator Guide",
-      description: "Learn how to create WiFi QR codes for guests and customers.",
-      slug: "/guides/wifi-qr-code-generator",
-      icon: <QrCode className="w-6 h-6" />,
-      category: "QR Tools",
-      readTime: "4 min read",
-    },
-    {
-      title: "vCard QR Code Tutorial",
-      description: "Create contact QR codes for business cards and networking.",
-      slug: "/guides/vcard-qr-code-tutorial",
-      icon: <QrCode className="w-6 h-6" />,
-      category: "QR Tools",
-      readTime: "5 min read",
-    },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="border-b">
+      {/* iOS-style Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 ios-nav">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">
-              <a href="/">ColorQRCode Tools</a>
-            </h1>
-            <nav className="flex gap-6">
-              <a href="/tools/color-palette" className="hover:text-primary-600">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-2xl icon-gradient-blue flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <h1 className="text-xl font-bold text-gradient">ColorQRCode</h1>
+            </Link>
+
+            <nav className="hidden md:flex items-center gap-8">
+              <Link href="/tools/color-palette" className="text-sm font-medium hover:text-[var(--ios-blue)] transition-colors">
                 Color Palette
-              </a>
-              <a href="/tools/qr-generator" className="hover:text-primary-600">
+              </Link>
+              <Link href="/tools/qr-generator" className="text-sm font-medium hover:text-[var(--ios-blue)] transition-colors">
                 QR Generator
-              </a>
-              <a href="/guides" className="text-primary-600">
+              </Link>
+              <Link href="/guides" className="text-sm font-medium text-[var(--ios-blue)]">
                 Guides
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 pt-32 pb-12">
         <div className="max-w-4xl mx-auto">
           {/* Hero */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <BookOpen className="w-10 h-10 text-primary-600" />
-              <h1 className="text-4xl font-bold">Guides & Tutorials</h1>
+          <div className="text-center mb-16 animate-fadeInUp">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-16 h-16 rounded-2xl icon-gradient-pink flex items-center justify-center shadow-lg">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
             </div>
-            <p className="text-xl text-gray-600">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white" style={{ letterSpacing: "-0.02em" }}>
+              Guides & Tutorials
+            </h1>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
               Learn how to make the most of our free design tools with our comprehensive guides
             </p>
           </div>
@@ -106,62 +82,65 @@ export default function GuidesPage() {
               <Link
                 key={index}
                 href={guide.slug}
-                className="group bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all"
+                className="glass-card p-8 group animate-fadeInScale"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary-100 rounded-lg text-primary-600">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 rounded-xl icon-gradient-blue text-white">
                     {guide.icon}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded">
-                        {guide.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary-600">
+                    <span className="inline-block text-xs font-semibold text-white bg-white/20 px-3 py-1 rounded-full mb-3">
+                      {guide.category}
+                    </span>
+                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-[var(--ios-blue)] transition-colors">
                       {guide.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-3">{guide.description}</p>
-                    <p className="text-xs text-gray-500">{guide.readTime}</p>
+                    <p className="text-white/70 text-sm">{guide.description}</p>
                   </div>
+                </div>
+                <div className="flex items-center gap-2 text-white/60 text-sm">
+                  <span>📖 {guide.readTime}</span>
                 </div>
               </Link>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="mt-12 bg-primary-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-600 mb-6">
+          <div className="mt-16 glass-card p-12 text-center animate-fadeInScale">
+            <h2 className="text-4xl font-bold mb-4 text-white">Ready to Get Started?</h2>
+            <p className="text-white/70 mb-8 text-lg">
               Try our free tools and start creating beautiful designs today.
             </p>
-            <div className="flex justify-center gap-4">
-              <a
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
                 href="/tools/color-palette"
-                className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition"
+                className="button-primary px-8 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2"
               >
+                <Palette className="w-5 h-5" />
                 Color Palette Generator
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/tools/qr-generator"
-                className="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+                className="glass-button px-8 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 text-white"
               >
+                <QrCode className="w-5 h-5" />
                 QR Code Generator
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="border-t py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-gray-600">
-            <p>&copy; 2025 ColorQRCode Tools. Free design tools & guides.</p>
-            <div className="flex justify-center gap-4 mt-4">
-              <a href="/privacy" className="hover:text-primary-600">Privacy</a>
-              <a href="/terms" className="hover:text-primary-600">Terms</a>
-              <a href="/contact" className="hover:text-primary-600">Contact</a>
+      <footer className="py-12 px-4 border-t border-white/10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center">
+            <p className="text-white/60 mb-6">© 2025 ColorQRCode Tools. Beautiful design tools for everyone.</p>
+            <div className="flex justify-center gap-4">
+              <Link href="/privacy" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Privacy</Link>
+              <Link href="/terms" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Terms</Link>
+              <Link href="/contact" className="glass-button px-4 py-2 rounded-xl text-sm font-medium text-white">Contact</Link>
             </div>
           </div>
         </div>
